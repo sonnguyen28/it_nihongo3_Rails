@@ -1,0 +1,42 @@
+<%= form_with(model: kanji, local: true) do |form| %>
+  <% if kanji.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kanji.errors.count, "error") %> prohibited this kanji from being saved:</h2>
+
+      <ul>
+        <% kanji.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :漢字 %>
+    <%= form.text_field :kanji %>
+  </div>
+
+  <div class="field">
+    <%= form.label :訓 %>
+    <%= form.text_field :kun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :音 %>
+    <%= form.text_field :on %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :イメージ %>
+    <%= form.file_field :image %><br>
+  </div>
+
+  <div class="field">
+    <%= form.label :意味 %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

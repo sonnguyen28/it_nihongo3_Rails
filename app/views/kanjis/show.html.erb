@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>漢字:</strong>
+  <%= @kanji.kanji %>
+</p>
+
+<p>
+  <strong>訓:</strong>
+  <%= @kanji.kun %>
+</p>
+
+<p>
+  <strong>音:</strong>
+  <%= @kanji.on %>
+</p>
+
+<p>
+  <% if @kanji.image.attached? %>
+    <%= image_tag @kanji.image %>
+  <% end %>
+</p>
+
+<p>
+  <strong>意味:</strong>
+  <%= @kanji.description %>
+</p>
+
+<%= link_to 'Edit', edit_kanji_path(@kanji) %> |
+<%= link_to 'Back', kanjis_path %>
