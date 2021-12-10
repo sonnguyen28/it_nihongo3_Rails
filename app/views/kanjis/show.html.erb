@@ -16,6 +16,12 @@
 </p>
 
 <p>
+  <% if @kanji.image.attached? %>
+    <%= image_tag @kanji.image %>
+  <% end %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @kanji.description %>
 </p>
