@@ -1,21 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Kanjis</h1>
+<h1>漢字リスト</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Kanji</th>
-      <th colspan="2"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @kanjis.each do |kanji| %>
       <tr>
-        <td><%= link_to kanji.kanji, kanji %></td>
-        <td><%= link_to 'Edit', edit_kanji_path(kanji) %></td>
-        <td><%= link_to 'Destroy', kanji, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to kanji.kanji, kanji, :style => "text-decoration: none; font-size: 20px" %></td>
+        <td><%= link_to '編集', edit_kanji_path(kanji), :style => "text-decoration: none; color: green" %></td>
+        <td><%= link_to '削除', kanji, method: :delete, data: { confirm: 'Are you sure?' }, :style => "text-decoration: none; color: red" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Kanji', new_kanji_path %>
+<%= link_to '漢字を追加する', new_kanji_path %>
