@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kanjis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kanji</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kanjis.each do |kanji| %>
+      <tr>
+        <td><%= link_to kanji.kanji, kanji %></td>
+        <td><%= link_to 'Edit', edit_kanji_path(kanji) %></td>
+        <td><%= link_to 'Destroy', kanji, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kanji', new_kanji_path %>
