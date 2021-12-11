@@ -42,7 +42,7 @@
     <% @kanji.kanji_comment.each do |kanji_comment| %>
     <li>
         <%= kanji_comment.comment %>
-        (<i><%= kanji_comment.user_id %></i>)
+        (<i><%= kanji_comment.user.name if kanji_comment.user %></i>)
     </li>
 <% end %>
 </ul>
