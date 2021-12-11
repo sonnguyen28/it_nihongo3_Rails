@@ -26,7 +26,7 @@
   <%= @kanji.description %>
 </p>
 
-<p>Review From</p>
+<h2>Review Form</h2>
  <%= form_with(model: @kanji_review, local: true) do |form| %>
    <div class= "field">
      <%= form.text_area :review %>

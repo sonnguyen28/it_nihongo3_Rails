@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :kanji_reviews
   get 'users/show'
+  get 'static_pages/home'
   root 'static_pages#home'
   devise_for :users
   resources :kanjis

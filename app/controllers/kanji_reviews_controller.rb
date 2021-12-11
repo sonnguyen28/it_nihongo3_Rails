@@ -1,8 +1,7 @@
 class KanjiReviewsController < ApplicationController
-  before_action :set_kanji_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_kanji_review, only: %i[ show edit update destroy ]
 
-  # GET /kanji_reviews
-  # GET /kanji_reviews.json
+  # GET /kanji_reviews or /kanji_reviews.json
   def index
     @kanji_reviews = KanjiReview.all
   end
@@ -21,8 +20,7 @@ class KanjiReviewsController < ApplicationController
   def edit
   end
 
-  # POST /kanji_reviews
-  # POST /kanji_reviews.json
+  # POST /kanji_reviews or /kanji_reviews.json
   def create
     @kanji_review = KanjiReview.new(kanji_review_params)
     @kanji_review.user_id = current_user.id
@@ -32,28 +30,26 @@ class KanjiReviewsController < ApplicationController
         format.html { redirect_to @kanji_review, notice: 'Kanji review was successfully created.' }
         format.json { render :show, status: :created, location: @kanji_review }
       else
-        format.html { render :new }
+        format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @kanji_review.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /kanji_reviews/1
-  # PATCH/PUT /kanji_reviews/1.json
+  # PATCH/PUT /kanji_reviews/1 or /kanji_reviews/1.json
   def update
     respond_to do |format|
       if @kanji_review.update(kanji_review_params)
         format.html { redirect_to @kanji_review, notice: 'Kanji review was successfully updated.' }
         format.json { render :show, status: :ok, location: @kanji_review }
       else
-        format.html { render :edit }
+        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @kanji_review.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /kanji_reviews/1
-  # DELETE /kanji_reviews/1.json
+  # DELETE /kanji_reviews/1 or /kanji_reviews/1.json
   def destroy
     @kanji_review.destroy
     respond_to do |format|
