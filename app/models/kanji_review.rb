@@ -1,2 +1,0 @@
-class KanjiReview < ApplicationRecord
-end

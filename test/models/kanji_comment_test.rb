@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class KanjiReviewTest < ActiveSupport::TestCase
+class KanjiCommentTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

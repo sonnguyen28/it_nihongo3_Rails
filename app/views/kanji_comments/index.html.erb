@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Kanji Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Kanji</th>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kanji_comments.each do |kanji_comment| %>
+      <tr>
+        <td><%= kanji_comment.user_id %></td>
+        <td><%= kanji_comment.kanji_id %></td>
+        <td><%= kanji_comment.comment %></td>
+        <td><%= link_to 'Show', kanji_comment %></td>
+        <td><%= link_to 'Edit', edit_kanji_comment_path(kanji_comment) %></td>
+        <td><%= link_to 'Destroy', kanji_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kanji Comment', new_kanji_comment_path %>

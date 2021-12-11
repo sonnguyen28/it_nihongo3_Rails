@@ -1,10 +1,10 @@
-<%= form_with(model: kanji_review, local: true) do |form| %>
-  <% if kanji_review.errors.any? %>
+<%= form_with(model: kanji_comment, local: true) do |form| %>
+  <% if kanji_comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(kanji_review.errors.count, "error") %> prohibited this kanji_review from being saved:</h2>
+      <h2><%= pluralize(kanji_comment.errors.count, "error") %> prohibited this kanji_comment from being saved:</h2>
 
       <ul>
-        <% kanji_review.errors.full_messages.each do |message| %>
+        <% kanji_comment.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :review %>
-    <%= form.text_area :review %>
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
   </div>
 
   <div class="actions">

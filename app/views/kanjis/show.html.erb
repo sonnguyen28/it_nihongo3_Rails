@@ -26,10 +26,10 @@
   <%= @kanji.description %>
 </p>
 
-<h2>Review Form</h2>
- <%= form_with(model: @kanji_review, local: true) do |form| %>
+<h2>Comment Form</h2>
+ <%= form_with(model: @kanji_comment, local: true) do |form| %>
    <div class= "field">
-     <%= form.text_area :review %>
+     <%= form.text_area :comment %>
      <%= form.hidden_field :kanji_id, :value => @kanji.id %>
    </div>
    <div class="actions">

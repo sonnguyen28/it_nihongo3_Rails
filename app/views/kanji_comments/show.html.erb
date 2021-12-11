@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @kanji_comment.user_id %>
+</p>
+
+<p>
+  <strong>Kanji:</strong>
+  <%= @kanji_comment.kanji_id %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @kanji_comment.comment %>
+</p>
+
+<%= link_to 'Edit', edit_kanji_comment_path(@kanji_comment) %> |
+<%= link_to 'Back', kanji_comments_path %>

@@ -8,6 +8,7 @@ class KanjisController < ApplicationController
 
   # GET /kanjis/1 or /kanjis/1.json
   def show
+      @kanji_comment = KanjiComment.new
   end
 
   # GET /kanjis/new

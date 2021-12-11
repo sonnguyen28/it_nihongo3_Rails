@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :kanji_reviews
+  resources :kanji_comments
   get 'users/show'
   get 'static_pages/home'
   root 'static_pages#home'
