@@ -24,10 +24,11 @@ class KanjiCommentsController < ApplicationController
   def create
     @kanji_comment = KanjiComment.new(kanji_comment_params)
     @kanji_comment.user_id = current_user.id
-
+    
     respond_to do |format|
      if @kanji_comment.save
-        format.html { redirect_to @kanji_comment, notice: "Kanji comment was successfully created." }
+         url = "/kanjis/" + @kanji_comment.kanji_id.to_s
+        format.html { redirect_to url, notice: "Kanji comment was successfully created." }
         format.json { render :show, status: :created, location: @kanji_comment }
       else
         format.html { render :new, status: :unprocessable_entity }

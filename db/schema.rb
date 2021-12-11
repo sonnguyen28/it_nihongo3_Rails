@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 2021_12_11_112404) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "kanji_reviews", force: :cascade do |t|
+  create_table "kanji_comments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "kanji_id"
-    t.text "review"
+    t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

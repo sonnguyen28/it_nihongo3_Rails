@@ -37,5 +37,15 @@
    </div>
  <% end %>
  
+ <h2>Comment List</h2>
+<ul>
+    <% @kanji.kanji_comment.each do |kanji_comment| %>
+    <li>
+        <%= kanji_comment.comment %>
+        (<i><%= kanji_comment.user_id %></i>)
+    </li>
+<% end %>
+</ul>
+ 
 <%= link_to 'Edit', edit_kanji_path(@kanji) %> |
 <%= link_to 'Back', kanjis_path %>
