@@ -26,5 +26,16 @@
   <%= @kanji.description %>
 </p>
 
+<p>Review From</p>
+ <%= form_with(model: @kanji_review, local: true) do |form| %>
+   <div class= "field">
+     <%= form.text_area :review %>
+     <%= form.hidden_field :kanji_id, :value => @kanji.id %>
+   </div>
+   <div class="actions">
+     <%= form.submit %>
+   </div>
+ <% end %>
+ 
 <%= link_to 'Edit', edit_kanji_path(@kanji) %> |
 <%= link_to 'Back', kanjis_path %>

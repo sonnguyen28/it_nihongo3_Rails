@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @kanji_review.user_id %>
+</p>
+
+<p>
+  <strong>Kanji:</strong>
+  <%= @kanji_review.kanji_id %>
+</p>
+
+<p>
+  <strong>Review:</strong>
+  <%= @kanji_review.review %>
+</p>
+
+<%= link_to 'Edit', edit_kanji_review_path(@kanji_review) %> |
+<%= link_to 'Back', kanji_reviews_path %>

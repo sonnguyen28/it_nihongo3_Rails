@@ -1,0 +1,2 @@
+module KanjiReviewsHelper
+end

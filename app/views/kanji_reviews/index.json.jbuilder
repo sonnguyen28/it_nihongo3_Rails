@@ -1,0 +1,1 @@
+json.array! @kanji_reviews, partial: "kanji_reviews/kanji_review", as: :kanji_review

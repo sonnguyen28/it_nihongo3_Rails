@@ -1,0 +1,1 @@
+json.partial! "kanji_reviews/kanji_review", kanji_review: @kanji_review
