@@ -26,6 +26,16 @@
   <%= @kanji.description %>
 </p>
 
+<h2>Comment List</h2>
+<ul>
+    <% @kanji.kanji_comment.each do |kanji_comment| %>
+    <li>
+        <%= kanji_comment.comment %>
+        (<i><%= kanji_comment.user.name if kanji_comment.user %></i>)
+    </li>
+<% end %>
+</ul>
+
 <h2>Comment Form</h2>
  <%= form_with(model: @kanji_comment, local: true) do |form| %>
    <div class= "field">
@@ -37,15 +47,7 @@
    </div>
  <% end %>
  
- <h2>Comment List</h2>
-<ul>
-    <% @kanji.kanji_comment.each do |kanji_comment| %>
-    <li>
-        <%= kanji_comment.comment %>
-        (<i><%= kanji_comment.user.name if kanji_comment.user %></i>)
-    </li>
-<% end %>
-</ul>
+  
  
 <%= link_to 'Edit', edit_kanji_path(@kanji) %> |
 <%= link_to 'Back', kanjis_path %>
