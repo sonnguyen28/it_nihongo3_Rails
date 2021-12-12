@@ -13,10 +13,6 @@ class KanjisController < ApplicationController
         Kanji.all
     end
   end
-  #
-#   def index 
-#       @kanjis = Kanji.search(params[:term]) 
-#   end
 
   # GET /kanjis/1 or /kanjis/1.json
   def show
