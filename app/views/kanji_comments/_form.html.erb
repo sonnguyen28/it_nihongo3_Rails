@@ -1,0 +1,32 @@
+<%= form_with(model: kanji_comment, local: true) do |form| %>
+  <% if kanji_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(kanji_comment.errors.count, "error") %> prohibited this kanji_comment from being saved:</h2>
+
+      <ul>
+        <% kanji_comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kanji_id %>
+    <%= form.number_field :kanji_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
