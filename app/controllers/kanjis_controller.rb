@@ -2,8 +2,16 @@ class KanjisController < ApplicationController
   before_action :set_kanji, only: %i[ show edit update destroy ]
   
   # GET /kanjis or /kanjis.json
+#   def index
+#     @kanjis = Kanji.all
+#   end
+  #
   def index
-    @kanjis = Kanji.all
+    @kanjis = if params[:term]
+        Kanji.where('kanji LIKE ?', "%#{params[:term]}%")
+    else
+        Kanji.all
+    end
   end
 
   # GET /kanjis/1 or /kanjis/1.json
@@ -19,7 +27,7 @@ class KanjisController < ApplicationController
   # GET /kanjis/1/edit
   def edit
   end
-
+  
   # POST /kanjis or /kanjis.json
   def create
     @kanji = Kanji.new(kanji_params)
@@ -65,6 +73,7 @@ class KanjisController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def kanji_params
-      params.require(:kanji).permit(:kanji, :kun, :on, :description, :image)
+      params.require(:kanji).permit(:kanji, :kun, :on, :description, :image, :term)
     end
+    #
 end

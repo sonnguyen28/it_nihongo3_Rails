@@ -2,6 +2,11 @@
 
 <h1>漢字リスト</h1>
 
+<%= form_tag(kanjis_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag '検索' %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -22,4 +27,6 @@
 
 <br>
 
+<%= link_to '戻る', kanjis_path %>
+<br/>
 <%= link_to '漢字を追加する', new_kanji_path %>
