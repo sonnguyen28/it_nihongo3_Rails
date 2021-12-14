@@ -1,28 +1,31 @@
+<div id="add-kanji-background"></div>
+<section id="add-kanji1">
+  <div class= "add-kanji-content">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>漢字:</strong>
+  <strong class="form-label">漢字:</strong>
   <%= @kanji.kanji %>
 </p>
 
 <p>
-  <strong>訓:</strong>
+  <strong class="form-label">訓 :</strong>
   <%= @kanji.kun %>
 </p>
 
 <p>
-  <strong>音:</strong>
+  <strong class="form-label">音 :</strong>
   <%= @kanji.on %>
 </p>
 
-<p>
+<p class="img">
   <% if @kanji.image.attached? %>
     <%= image_tag @kanji.image %>
   <% end %>
 </p>
 
 <p>
-  <strong>意味:</strong>
+  <strong class="form-label">意味:</strong>
   <%= @kanji.description %>
 </p>
 
@@ -51,3 +54,5 @@
  
 <%= link_to 'Edit', edit_kanji_path(@kanji) %> |
 <%= link_to 'Back', kanjis_path %>
+  </div>
+</section>
