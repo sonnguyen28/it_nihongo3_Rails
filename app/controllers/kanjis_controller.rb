@@ -2,8 +2,15 @@ class KanjisController < ApplicationController
   before_action :set_kanji, only: %i[ show edit update destroy ]
   
   # GET /kanjis or /kanjis.json
+#   def index
+#     @kanjis = Kanji.all
+#   end
   def index
-    @kanjis = Kanji.all
+    @kanjis = if params[:term]
+        Kanji.where('kanji LIKE ?', "%#{params[:term]}%")
+    else
+        Kanji.all
+    end
   end
 
   # GET /kanjis/1 or /kanjis/1.json
