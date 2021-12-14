@@ -1,3 +1,4 @@
+
 <%= form_with(model: kanji, local: true) do |form| %>
   <% if kanji.errors.any? %>
     <div id="error_explanation">
@@ -12,31 +13,34 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :漢字 %>
-    <%= form.text_field :kanji %>
+    <%= form.label :漢字 , class:'form-label'%>
+    <%= form.text_field :kanji, class:'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :訓 %>
-    <%= form.text_field :kun %>
+    <%= form.label :訓, class:'form-label'  %>
+    <%= form.text_field :kun, class:'form-control' %>
+
   </div>
 
   <div class="field">
-    <%= form.label :音 %>
-    <%= form.text_field :on %>
+    <%= form.label :音 ,class:'form-label' %>
+    <%= form.text_field :on, class:'form-control' %>
   </div>
   
   <div class="field">
-    <%= form.label :イメージ %>
+    <%= form.label :イメージ,class:'form-label' %><br>
     <%= form.file_field :image %><br>
   </div>
 
   <div class="field">
-    <%= form.label :意味 %>
-    <%= form.text_field :description %>
+    <%= form.label :意味 , class:'form-label' %>
+    <%= form.text_field :description, class:'form-control' %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+

@@ -13,3 +13,294 @@
  *= require_tree .
  *= require_self
  */
+body, html{
+    margin: 0 auto;
+    height: 100%;
+}
+nav{
+    margin: 0 auto;
+}
+
+/* SIGN UP  */
+#sign-up-background {
+    background-image: url("https://ak.picdn.net/shutterstock/videos/8226013/thumb/1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* blur effect */
+    filter: blur(1px);
+    /* full height */
+    height: 130%;
+    width: 100%;
+}
+#sign-up {
+    background-color: var(--bs-light);
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    border: 2px solid var(--bs-success);
+    margin: 0 auto;
+    box-shadow: 5px 5px 2px var(--bs-dark);
+    border-radius: 20px;
+    display: flex;
+}
+
+#sign-up-content {
+    flex: 1 1;
+    padding: 1em;
+}
+
+#sign-up h1 {
+    text-align: center;
+    color: var(--bs-success);
+    padding: 1em 0;
+}
+
+#sign-up #third-party-sign-up {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+    gap: 10px;
+}
+
+
+
+#change-log-in {
+    color: var(--bs-success);
+    opacity: 0.7;
+}
+
+#change-log-in a {
+    color: var(--bs-dark);
+}
+
+#change-log-in a:hover {
+    color:#05134B;
+}
+
+@media (max-width: 1000px) {
+    #sign-up {
+        width: 80%;
+    }
+
+    #sign-up #third-party-sign-up {
+        flex-flow: column nowrap;
+    }
+}
+@media (max-width: 480px) {
+    #sign-up {
+        flex-flow: column nowrap;
+    }
+    #sign-up-background {
+        background-image: url("https://ak.picdn.net/shutterstock/videos/8226013/thumb/1.jpg");
+    }
+    #sign-up-side-image {
+        background-image: url("https://wallpapercave.com/wp/wp3247207.jpg");
+    }
+}
+
+/* LOG IN  */
+
+#log-in-background , #add-kanji-background {
+    background-image: url("https://ak.picdn.net/shutterstock/videos/8226013/thumb/1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* blur effect */
+    filter: blur(1px);
+    /* full height */
+    height: 100%;
+    width: 100%;
+}
+
+#log-in  {
+    background-color: var(--bs-light);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    border: 2px solid var(--bs-success);
+    margin: 0 auto;
+    box-shadow: 5px 5px 2px var(--bs-dark);
+    border-radius: 20px;
+    align-items: stretch;
+    padding: 10px;
+}
+#add-kanji{
+    background-color: var(--bs-light);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    border: 2px solid var(--bs-success);
+    margin: 0 auto;
+    box-shadow: 5px 5px 2px var(--bs-dark);
+    border-radius: 20px;
+    padding: 5px 2%;
+}
+#add-kanji1{
+    background-color: var(--bs-light);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    border: 2px solid var(--bs-success);
+    margin: 0 auto;
+    box-shadow: 5px 5px 2px var(--bs-dark);
+    border-radius: 20px;
+    padding: 5px 2%;
+}
+
+
+#log-in h1 , #add-kanji h1{
+    text-align: center;
+    padding: 1em 0;
+    color: var(--bs-success);
+}
+
+#change-sign-up {
+    color: var(--bs-success);
+    opacity: 0.7;
+}
+
+#change-sign-up a {
+    color: var(--bs-dark);
+}
+#change-sign-up a:hover {
+    color:#05134B;
+}
+@media (max-width: 1000px) {
+    #log-in {
+        width: 80%;
+    }
+
+    #log-in #third-party-log-in {
+        flex-flow: column nowrap;
+    }
+}
+@media (max-width: 480px) {
+    #log-in {
+        flex-flow: column nowrap;
+    }
+    #log-in-background {
+        background-image: url(../img/login-pc.jpg);
+    }
+    #log-in-side-image {
+        background-image: url(../img/login-background-pc.jpg);
+    }
+}
+
+/*MAIN PAGE*/
+.main-page{
+    background-image: url("https://ak.picdn.net/shutterstock/videos/8226013/thumb/1.jpg");
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+.main-page h1, .main-page p{
+    color: var(--bs-white);
+    font-size: 1.5em;
+    font-weight: 500;
+    text-shadow: 0.1em 0.1em 0.3em var(--bs-dark);
+    padding-bottom: 140px;
+}
+.main-page h1{
+    font-size: 5em;
+}
+.main-page button {
+    background-color: white;
+    color: #05134B;
+    /*text-shadow: 0.01em 0.01em 0.1em var(--bs-dark);*/
+    height: 80px;
+    width: 320px;
+    border: 0.05em solid var(--bs-dark);
+    border-radius: 20px;
+    font-size: 40px;
+    font-weight: 2000;
+}
+.main-page button:hover{
+    color: white;
+    background-color: #05134B;
+    opacity: 0.9;
+    border: 0.015em solid var(--bs-dark);
+}
+.main-page button:focus{
+    color:white;
+    background-color: #05134B;
+    border: 0.025em solid var(--bs-dark);
+    border-radius: 20px;
+}
+
+img{
+    height: 200px ;
+    width: 200px;
+}
+/*HOVER/
+ */
+.container-fluid a:hover{
+    background-color: color: var(--bs-body-color);
+    opacity: 0.9;
+    border: 0.015em solid white;
+    border-radius: 10%;
+}
+a:hover{
+    background-color: color: var(--bs-body-color);
+    opacity: 0.9;
+    border: 0.015em solid white;
+    border-radius: 10%;
+}
+/* About us*/
+.about-us{
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 100%;
+    padding-top: -30px;
+}
+#about-us h1 , #about-us p{
+    color: var(--bs-yellow);
+    font-size: 2em;
+    font-weight: 500;
+    text-shadow: 0.1em 0.1em 0.5em var(--bs-dark);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#about-us-flex {
+    display: flex;
+    flex: row;
+    justify-content: space-around !important;
+}
+#about-us-flex li {
+    background: linear-gradient(to top, #fff, #ffcb0d);
+    border: 1px solid white;
+    padding: 5px;
+    height: 500px;
+    width: 270px;
+    text-align: center;
+}
+#about-us-flex {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+
+}
+#about-us-flex img{
+    border-radius: 99%;
+    height: 250px;
+    width: 250px;
+    padding: 15px;
+}
